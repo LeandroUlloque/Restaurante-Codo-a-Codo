@@ -1,0 +1,35 @@
+
+:root{
+    --primary-color: #1e662d;
+    --bg-color:#181419;
+    --secondary-color:#ce682d;
+    --third-color:#52ad4a;
+    --white-color: #fdf5ef;
+    /* fuentes */
+    --primary-font:'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color:var(--white-color)
+}
+
+h1,h2{
+    color:var(--white-color);
+    font-size: 2rem;
+}
+
+.header, .footer{
+    background-color: var(--bg-color);
+}
+.portada{
+    background-color: var(--secondary-color);
+} 
+.carousel, .formulario {
+    background-color: var(--primary-color);
+}
