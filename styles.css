@@ -1,5 +1,5 @@
 
-:root{
+:root{ /*Raíz*/
     --primary-color: #1e662d;
     --bg-color:#181419;
     --secondary-color:#ce682d;
@@ -11,32 +11,32 @@
     padding: 0;
 }
 
-a{
+a{ 
     text-decoration: none;
     color:var(--white-color)
 }
 
-h1,h2{
+h1,h2{ /*Títulos*/
     color:var(--white-color);
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
-.header div nav a{
+.header div nav a{ /*Restaurante*/
     text-decoration:none;
     font-size: 2rem;
     font-weight: bolder;
     font-family:Arial, Helvetica, sans-serif;
-    color: var(--white-color);
-    padding: 40px 40px;
+    color: var(--secondary-color);
+    padding: 20px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
-.caja{
-    width:100vw;
+.caja{ /*Todo: header, body, foot*/
+    width:100%;
     margin: 0;
+    padding:0;
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: 10vh 75vh 10vh;
@@ -44,7 +44,7 @@ h1,h2{
     flex-direction: row;
     flex-wrap: wrap;
 }
-.portada ,.carousel ,.formulario{
+.portada ,.carousel ,.formulario{ /*body*/
     width:100vw;
     display: grid;
     grid-template-columns: repeat(6,1fr);
@@ -57,26 +57,59 @@ h1,h2{
     justify-content:space-between;
 }
 
-.header, .footer{
+.portada{
+    background-image: url(./img/hamburguesa\ 1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-shadow: inset 0 0 0 2000px rgba(245, 159, 47, 0.5); 
+    z-index: 2;
+}
+
+
+.carousel{
+    background-image: url(./img/pizza\ 1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-shadow: inset 0 0 0 2000px rgba(53, 160, 85, 0.5); /*imagen se verá opacada en el render*/
+    z-index: 2;
+}
+.formulario{
+    background-image: url(./img/helado.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-shadow: inset 0 0 0 2000px rgba(96, 204, 69, 0.5); /*imagen se verá opacada en el render*/
+    z-index: 2;  
+}
+
+.header, .footer{ /*header y footer*/
+    width: 100vw;
     background-color: var(--bg-color);
+    background-size:cover;
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: 1fr;
     gap:10px;
     margin:0;
     padding:0; 
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.header ul li,.footer ul li{
+.header ul li,.footer ul li{ /* items de header y footer*/ 
     justify-content: space-around;
     padding: 20px 40px;
 }
-.header ul li:hover, .footer ul li:hover{
+.header ul li:hover, .footer ul li:hover{ /* items de header y footer, efecto subrayado*/ 
     text-decoration: underline;
     color:var(--white-color);
 }
 
-.nav{
+.nav{  /*barras de navegación arriba y abajo*/
     display:flex;
     text-decoration: none;
     list-style: none;
@@ -87,10 +120,16 @@ h1,h2{
 
 .portada{
     background-color: var(--secondary-color);
+    align-items: center;
+    justify-content: center;
 } 
 .carousel{
     background-color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
 } 
 .formulario{
     background-color: var(--third-color);
+    align-items: center;
+    justify-content: center;
 }
